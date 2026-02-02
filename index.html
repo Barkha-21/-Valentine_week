@@ -19,5 +19,84 @@
       background: white;
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 420px;
+    }
 
+    h1 {
+      color: #e63946;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: beat 1s infinite;
+      margin-bottom: 10px;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .yes {
+      background-color: #e63946;
+      color: white;
+    }
+
+    .no {
+      background-color: #ccc;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #e63946;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Happy Valentine's Week</h1>
+    <p>My love 💕</p>
+
+    <p><strong>Would you be my Valentine? 💌</strong></p>
+
+    <button class="yes" onclick="sayYes()">Yes ❤️</button>
+    <button class="no" onclick="sayNo()">Of course 😘</button>
+
+    <div id="response">
+      Yayyy!! You just made me the happiest person 💖🥰
+    </div>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("response").style.display = "block";
+    }
+
+    function sayNo() {
+      document.getElementById("response").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
